@@ -6,11 +6,13 @@ internal class AccountCategoryService
 
     public AccountCategoryService()
     {
-        accountCategories = new();
-        accountCategories.Add(1, AccountCategory.Buyer);
-        accountCategories.Add(2, AccountCategory.Buyer);
-        accountCategories.Add(3, AccountCategory.Reseller);
-        accountCategories.Add(4, AccountCategory.Reseller);
+        accountCategories = new()
+        {
+            { 1, AccountCategory.Buyer },
+            { 2, AccountCategory.Buyer },
+            { 3, AccountCategory.Reseller },
+            { 4, AccountCategory.Reseller }
+        };
     }
 
     public AccountCategory GetCategory(int accountId)
