@@ -1,11 +1,7 @@
 ﻿namespace Mediator_Demo;
 
-internal class DesktopComputer : Participant
+internal class DesktopComputer(string key, IMediator mediator) : Participant(key, mediator)
 {
-	public DesktopComputer(string key, IMediator mediator) : base(key, mediator)
-	{
-	}
-
     public override void SendCommand(string receiver, string command)
     {
         Console.WriteLine($"Sending {command} command to {receiver}.");
